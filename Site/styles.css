@@ -48,7 +48,7 @@ header form{
 .login {
     width: 25%;
     position: absolute;
-    right: -100px;
+    left: 82%;
     top: 0px;
     padding-top: 5px;
  }

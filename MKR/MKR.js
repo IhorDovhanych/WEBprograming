@@ -39,4 +39,4 @@ document.getElementById("task3").onclick = () => {
     let autoSumb = document.getElementById("autoSymb").value;
     if(autoNumber.slice(0,2) != autoSumb) alert("Не правильно вказано регіон");
 
-}
+} 
