@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sing in _ Nirvana</title>
-    <link rel="stylesheet" href="./css/styleslog.css">
+    <title>Support _ Nirvana</title>
+    <link rel="stylesheet" href="./css/stylesreg.css">
     <link rel="shortcut icon" href="./img/ID_LOGO.png" type="image/x-icon">
 </head>
 <body>
@@ -14,29 +14,24 @@
         <img src="./img/Logo_white.png" alt="ID" width="56" class="logo">
         </a>
     </header>
-
     <div class="container">
-        
-            <div id="block1">
-                <h1>Sing in</h1>
-                <input type="text" name="text" class="input" placeholder="Name">
-                <br>
-                <input type="password" name="password" class="input" placeholder="Password">
-                <br>
-                <span class="text">
-                    <a href="">Forgot password?</a>
-                </span>
-                <br>
-                <button class="button">Sing in</button>
-                <br>
-                <span class="text">
-                    <a href="registration.html">Do not have an account?<br>
-                        Create him!</a>
-                </span>
+        <form>
+            <h1>Support</h1>
+            <div class="input">
+                <input type="text" name="text" id="text" placeholder="Send by : ">
+                <select class="select">
+                    <option value="">Chose your problem</option>
+                    <option>Can't create account</option>
+                    <option>Can't change avatar</option>
+                    <option>Payments is not deploy</option>
+                    <option>A post is not correct</option>
+                </select>
             </div>
-            <div id="block2">
-                <img src="./img/ID_Logo3.png">
+            <div class="textarea">
+                <textarea id="textarea" cols="40" rows="20" placeholder="Describe your problem"></textarea>
             </div>
+            <button class="button">Send</button>
+        </form>
     </div>
     <footer>
         <section>

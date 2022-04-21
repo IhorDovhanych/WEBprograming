@@ -3,7 +3,7 @@ body {
 background-color: #fff5e1;
 padding: 0px;
 margin: 0px;
-font-family: 'Arial';
+font-family: Arial;
 text-decoration: none;
 }
 
@@ -14,6 +14,9 @@ header {
     height: 55px;
     align-self: bottom;
     overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
 }
 
 header a{
@@ -31,7 +34,7 @@ header form{
     padding-top: 7px;
 }
 .search{
-    background-image: url(./search_icon.png);
+    background-image: url(../img/search_icon.png);
     background-position: 10px;
     background-size:30px;
     background-repeat: no-repeat;
@@ -46,7 +49,6 @@ header form{
 }
 
 .login {
-    width: 25%;
     position: absolute;
     left: 82%;
     top: 0px;
@@ -78,10 +80,10 @@ header form{
 .login a:first-child::after {
     content: "";
     border-right: 3px solid #3d320f;
-    padding-left: 16%;
+    padding-left: 15px;
 }
 .login a:last-child {
-    margin-left: 29%;
+    margin-left: 115px;
 }
 
 #NewYorkGif {
@@ -104,7 +106,7 @@ header form{
 }
 
 #MainPage{
-    margin-top: 50px;
+    margin-top: 105px;
     width: 80%;
     display: grid;
     overflow: hidden;
@@ -124,11 +126,11 @@ header form{
     border-radius: 6px;
 }
 
-#AboutGroup1{
+#AboutGroup1 {
     margin-top: 150px;
     margin-left: 10%;
     width: 80%;
-    border: #000 2px solid;
+    border: rgb(210, 210, 210) 2px solid;
     border-radius: 30px;
     height: 600px;
     overflow: hidden;
@@ -139,8 +141,8 @@ header form{
     height: 100%;
     overflow-y: scroll;
 }
-#AboutGroup2 h1{
-    border-bottom: #000 2px solid;
+#AboutGroup2 h1, #slider h1{
+    border-bottom: rgb(210, 210, 210) 2px solid;
     padding-bottom: 17px;
     background-color: white;
     width: 98%;
@@ -159,29 +161,150 @@ header form{
     width: 98%;
     padding-left: 1%;
 }
-.item{
-    border: #000 2px solid;
+#AboutGroup3 div{
+    border: rgb(210, 210, 210) 2px solid;
     border-radius: 10px;
     overflow: hidden;
     padding: 5px;
     background-color: white;
 }
-.item img{
+
+#AboutGroup3 div img{
     padding: 10px;
     border-radius: 30px;
     overflow: hidden;
     width: 80%;
     margin-left: 10%;
 }
-.item:first-child{
+#AboutGroup3 div:first-child{
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.item:nth-child(2){
+#AboutGroup3 div:nth-child(2){
     grid-column-start:2;
     grid-column-end:4;
 }
-.item:last-child{
+#AboutGroup3 div:last-child{
     overflow-y: scroll;
     grid-column-start:3;
+}
+
+#slider {
+    margin-top: 150px;
+    margin-left: 10%;
+    width: 80%;
+    border: rgb(210, 210, 210) 2px solid;
+    border-radius: 30px;
+    height: 600px;
+    overflow-y: scroll;
+    background-color: rgb(222, 222, 222);
+    box-shadow: 0px 0px 20px black;
+}
+#content1{
+    display: flex;
+    padding: 0px 30px 30px 30px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#content1 div{
+    flex-basis: 20%;
+    border: rgb(210, 210, 210) 2px solid;
+    background-color: white;
+    border-radius: 10px 10px 30px 30px;
+    padding: 10px;
+}
+
+#content2{
+    display: flex;
+    padding: 0px 30px 30px 30px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#content2 div{
+    flex-basis: 20%;
+    border: rgb(210, 210, 210) 2px solid;
+    background-color: white;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+#content2 div span{
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+#content2 div p{
+    font-size: 13px;
+    color: rgb(97, 97, 97);
+    margin-left: 60px;
+}
+#content2 span{
+    margin-left: 10px;
+}
+#content2 div img{
+    width: 50px;
+    border-radius: 35px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.span{
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 200px;
+    background-color: #000;
+    color: white;
+}
+footer div{
+    padding-left: 28%;
+    padding-bottom: 20px;
+}
+footer nav{
+    text-transform: uppercase;
+    padding: 0px 28% 0px 28%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer nav a{
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 2px black;
+}
+footer nav a:hover{
+    border-bottom: white 2px solid;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer span img{
+    padding-top: 2px;
+    width: 15px;
+    padding-right: 10px;
+}
+footer img{
+    width: 30px;
+}
+footer div div{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 17%;
+}
+.support{
+    background-color: white;
+    color: black;
+    padding: 5px 15px 7px 15px;
+    border-radius: 20px;
+    border: black 2px solid;
+}
+.support:hover{
+    background-color: #000;
+    color: white;
+    border: white 2px solid;
 }
