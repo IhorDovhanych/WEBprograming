@@ -308,3 +308,12 @@ footer div div{
     color: white;
     border: white 2px solid;
 }
+@media screen and (max-width: 500px) {
+    
+    .search{
+        background-image: none;
+    }
+    .login{
+        left: 79%;
+    }
+}
