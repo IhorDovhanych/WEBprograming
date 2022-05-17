@@ -1,0 +1,19 @@
+.mood {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+.mood:first-child {
+  background-color: red;
+}
+.mood:nth-child(2) {
+  background-color: blue;
+}
+input[type='button'] {
+  width: 6em;
+  height: 4em;
+}
+
+.selected {
+  display: block;
+}
