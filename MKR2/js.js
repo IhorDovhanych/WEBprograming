@@ -1,13 +1,13 @@
 class Film{
     constructor(id,name,director,producer,actorsList = [],trailerUrl,year,cashFees){
-        this.id = id
-        this.name = name
-        this.director = director
-        this.producer = producer
-        this.actorsList = actorsList
-        this.trailerUrl = trailerUrl
-        this.year = year
-        this.cashFees = cashFees
+        this.id = id;
+        this.name = name;
+        this.director = director;
+        this.producer = producer;
+        this.actorsList = actorsList;
+        this.trailerUrl = trailerUrl;
+        this.year = year;
+        this.cashFees = cashFees;
     }
 }
 class FilmStr extends Film{
