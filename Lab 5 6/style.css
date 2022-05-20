@@ -1,0 +1,23 @@
+#constructor-form{
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.constructor-element{
+    margin: 5px;
+    width: 250px;
+}
+#open{
+    position: absolute;
+}
+
+#table-list{
+    margin: auto;
+    width: 50%; 
+    margin-top: 40px;
+}
+
+.hide{
+    display: none;
+}
