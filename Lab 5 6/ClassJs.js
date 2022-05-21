@@ -17,10 +17,11 @@ class AZS{
     getGasolinesStr(){
         const keys = Object.keys(this.gasolinesValueByName)
         let result = ""
-        for(let i=0; i < keys.length; i++){
+        for(let i=0; i < keys.length-1; i++){
 
             result += keys[i] + "," + this.gasolinesValueByName[keys[i]] + " "
         }
+        result += keys[keys.length-1] + "," + this.gasolinesValueByName[keys[keys.length-1]]
         return result
     }
     toString(){

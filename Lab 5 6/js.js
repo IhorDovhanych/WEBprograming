@@ -159,6 +159,7 @@ function renderInput(i) {
     }
 
 }
+
 function renderOk(i,id,adress,owner,gasoline,cost){
     const tableList = document.getElementById("table-list-body")
     tableList.innerHTML = ``
@@ -200,6 +201,21 @@ function renderOk(i,id,adress,owner,gasoline,cost){
             tableList.appendChild(tr)
         }
         else{
+            objAzs.id = id
+            objAzs.adress = adress
+            objAzs.owner = owner
+            console.log(gasoline.split(" "))
+            console.log(cost.split(" "))
+            
+            const arrGasoline = gasoline.split(" ")
+            const arrCost = cost.split(" ")
+
+            for (let g = 0; g < arrGasoline.length; g++) {
+            const type = arrGasoline[g].split(",")[0]
+            const volume = arrGasoline[g].split(",")[1]
+            objAzs.addGasolines(type, volume, arrCost[g])
+            }
+
             const idOk = createTd(id)
             const adressOk = createTd(adress)
             const ownerOk = createTd(owner)
