@@ -127,7 +127,7 @@ function renderInput(i) {
         }
         else {
             const tr = document.createElement("tr")
-
+            console.log(objAzs.costs)
             const id = createInput(objAzs.id)
             const adress = createInput(objAzs.adress)
             const owner = createInput(objAzs.owner)
@@ -204,8 +204,6 @@ function renderOk(i,id,adress,owner,gasoline,cost){
             objAzs.id = id
             objAzs.adress = adress
             objAzs.owner = owner
-            console.log(gasoline.split(" "))
-            console.log(cost.split(" "))
             
             const arrGasoline = gasoline.split(" ")
             const arrCost = cost.split(" ")
@@ -215,7 +213,9 @@ function renderOk(i,id,adress,owner,gasoline,cost){
             const volume = arrGasoline[g].split(",")[1]
             objAzs.addGasolines(type, volume, arrCost[g])
             }
-
+            console.log(gasoline.split(" "))
+            console.log(cost.split(" "))
+            
             const idOk = createTd(id)
             const adressOk = createTd(adress)
             const ownerOk = createTd(owner)
