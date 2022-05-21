@@ -204,7 +204,8 @@ function renderOk(i,id,adress,owner,gasoline,cost){
             objAzs.id = id
             objAzs.adress = adress
             objAzs.owner = owner
-            
+            objAzs.gasoline = {}
+            objAzs.costs = []
             const arrGasoline = gasoline.split(" ")
             const arrCost = cost.split(" ")
 
@@ -213,9 +214,9 @@ function renderOk(i,id,adress,owner,gasoline,cost){
             const volume = arrGasoline[g].split(",")[1]
             objAzs.addGasolines(type, volume, arrCost[g])
             }
-            console.log(gasoline.split(" "))
-            console.log(cost.split(" "))
-            
+            console.log(arrCost)
+            console.log(objAzs.costs)
+
             const idOk = createTd(id)
             const adressOk = createTd(adress)
             const ownerOk = createTd(owner)
