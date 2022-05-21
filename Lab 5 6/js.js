@@ -53,31 +53,197 @@ function render() {
         const owner = createTd(objAzs.owner)
         const gasoline = createTd(objAzs.getGasolinesStr())
         const cost = createTd(objAzs.costs.join(" "))
+        const functionsContainer = document.createElement("td")
         const deleteBtn = document.createElement("button")
         deleteBtn.innerText = "DELETE"
-        deleteBtn.addEventListener("click",
-        () =>{
-            console.log(i)
-            azsArr.splice(i,1)
+        deleteBtn.addEventListener("click", () => {
+            azsArr.splice(i, 1)
             render()
         })
+        const editBtn = document.createElement("button")
+        editBtn.innerText = "EDIT"
+        editBtn.addEventListener("click", () => {
+            renderInput(i)
+        })
+        const okBtn = document.createElement("button")
+        okBtn.innerText = "OK"
+        okBtn.classList.add("hide")
 
-        const functionsContainer = document.createElement("td")
         functionsContainer.appendChild(deleteBtn)
-
+        functionsContainer.appendChild(editBtn)
+        functionsContainer.appendChild(okBtn)
         tr.appendChild(id)
         tr.appendChild(adress)
         tr.appendChild(owner)
         tr.appendChild(gasoline)
         tr.appendChild(cost)
         tr.appendChild(functionsContainer)
-
         tableList.appendChild(tr)
 
     }
 }
-function createTd(text){
+
+function renderInput(i) {
+
+    const tableList = document.getElementById("table-list-body")
+    tableList.innerHTML = ``
+
+    for (let j = 0; j < azsArr.length; j++) {
+        const objAzs = azsArr[j]
+        if (j != i) {
+            const tr = document.createElement("tr")
+
+            const id = createTd(objAzs.id)
+            const adress = createTd(objAzs.adress)
+            const owner = createTd(objAzs.owner)
+            const gasoline = createTd(objAzs.getGasolinesStr())
+            const cost = createTd(objAzs.costs.join(" "))
+            const functionsContainer = document.createElement("td")
+            const deleteBtn = document.createElement("button")
+            deleteBtn.innerText = "DELETE"
+            deleteBtn.addEventListener("click", () => {
+                azsArr.splice(i, 1)
+                render()
+            })
+            const editBtn = document.createElement("button")
+            editBtn.innerText = "EDIT"
+            editBtn.addEventListener("click", () => {
+                renderInput(j)
+            })
+            const okBtn = document.createElement("button")
+            okBtn.innerText = "OK"
+            okBtn.classList.add("hide")
+
+            functionsContainer.appendChild(deleteBtn)
+            functionsContainer.appendChild(editBtn)
+
+            tr.appendChild(id)
+            tr.appendChild(adress)
+            tr.appendChild(owner)
+            tr.appendChild(gasoline)
+            tr.appendChild(cost)
+            tr.appendChild(functionsContainer)
+            tableList.appendChild(tr)
+        }
+        else {
+            const tr = document.createElement("tr")
+
+            const id = createInput(objAzs.id)
+            const adress = createInput(objAzs.adress)
+            const owner = createInput(objAzs.owner)
+            const gasoline = createInput(objAzs.getGasolinesStr())
+            const cost = createInput(objAzs.costs.join(" "))
+            const functionsContainer = document.createElement("td")
+            const okBtn = document.createElement("button")
+            okBtn.innerText = "OK"
+            okBtn.classList.remove("hide")
+            okBtn.addEventListener("click", () =>{
+                console.log(gasoline.firstChild.value)
+                console.log(cost.firstChild.value)
+            renderOk(j,id.firstChild.value,
+                adress.firstChild.value,
+                owner.firstChild.value,
+                gasoline.firstChild.value,
+                cost.firstChild.value)
+            })
+            functionsContainer.appendChild(okBtn)
+
+            tr.appendChild(id)
+            tr.appendChild(adress)
+            tr.appendChild(owner)
+            tr.appendChild(gasoline)
+            tr.appendChild(cost)
+            tr.appendChild(functionsContainer)
+            tableList.appendChild(tr)
+        }
+    }
+
+}
+function renderOk(i,id,adress,owner,gasoline,cost){
+    const tableList = document.getElementById("table-list-body")
+    tableList.innerHTML = ``
+
+    for (let j = 0; j < azsArr.length; j++) {
+        const objAzs = azsArr[j]
+        const tr = document.createElement("tr")
+        if(j!=i){
+            const idOk = createTd(objAzs.id)
+            const adressOk = createTd(objAzs.adress)
+            const ownerOk = createTd(objAzs.owner)
+            const gasolineOk = createTd(objAzs.getGasolinesStr())
+            const costOk = createTd(objAzs.costs.join(" "))
+            const functionsContainerOk = document.createElement("td")
+            const deleteBtn = document.createElement("button")
+            deleteBtn.innerText = "DELETE"
+            deleteBtn.addEventListener("click", () => {
+                azsArr.splice(i, 1)
+                render()
+            })
+            const editBtn = document.createElement("button")
+            editBtn.innerText = "EDIT"
+            editBtn.addEventListener("click", () => {
+                renderInput(j)
+            })
+            const okBtn = document.createElement("button")
+            okBtn.innerText = "OK"
+            okBtn.classList.add("hide")
+
+            functionsContainerOk.appendChild(deleteBtn)
+            functionsContainerOk.appendChild(editBtn)
+
+            tr.appendChild(idOk)
+            tr.appendChild(adressOk)
+            tr.appendChild(ownerOk)
+            tr.appendChild(gasolineOk)
+            tr.appendChild(costOk)
+            tr.appendChild(functionsContainerOk)
+            tableList.appendChild(tr)
+        }
+        else{
+            const idOk = createTd(id)
+            const adressOk = createTd(adress)
+            const ownerOk = createTd(owner)
+            const gasolineOk = createTd(gasoline)
+            const costOk = createTd(cost)
+            const functionsContainerOk = document.createElement("td")
+            const deleteBtn = document.createElement("button")
+            deleteBtn.innerText = "DELETE"
+            deleteBtn.addEventListener("click", () => {
+                azsArr.splice(i, 1)
+                render()
+            })
+            const editBtn = document.createElement("button")
+            editBtn.innerText = "EDIT"
+            editBtn.addEventListener("click", () => {
+                renderInput(j)
+            })
+            const okBtn = document.createElement("button")
+            okBtn.innerText = "OK"
+            okBtn.classList.add("hide")
+
+            functionsContainerOk.appendChild(deleteBtn)
+            functionsContainerOk.appendChild(editBtn)
+
+            tr.appendChild(idOk)
+            tr.appendChild(adressOk)
+            tr.appendChild(ownerOk)
+            tr.appendChild(gasolineOk)
+            tr.appendChild(costOk)
+            tr.appendChild(functionsContainerOk)
+            tableList.appendChild(tr)
+        }
+    }
+}
+
+
+function createTd(text) {
     const element = document.createElement("td")
     element.innerText = text
+    return element
+}
+function createInput(text) {
+    const element = document.createElement("td")
+    element.appendChild(document.createElement("input"))
+    element.firstChild.value = text
     return element
 }
