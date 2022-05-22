@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    margin-top: 10px;
+    margin-left: 20px;
+    position: fixed;
+    z-index: 99;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 7px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+a:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.a{
+    margin-left: 100px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#task2{
+    margin: auto;
+    width: 100%;
+    height: 455px;
+    background-color: rgb(71, 53, 208);
+    padding-top: 230px;
+}
+.container{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+}
+#tabIndex{
+    border: 0px;
+    border-bottom: 2px solid gray;
+    padding: 10px;
+    padding-left: 0px;
+    font-size: 15px;
+}
+#tabIndex:focus{
+    outline: 0px;
+    border-bottom: 2px solid black;
+}
+#changeTab{
+    border: 1px;
+    padding: 10px;
+    
+}
+#changeTab:hover{
+    filter:brightness(97%)
+}
+#changeTab:active{
+    filter: brightness(90%);
+}
+.radioBtn{
+    padding: 0px;
+    margin-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    background-color: transparent;
+    color: gray;
+    transition: 0.1s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.radioBtn:hover{
+    color: black;
+}
+.active{
+    color: black;
+}
+#content{
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* task 3 */
+
+#task3{
+    margin: auto;
+    width: 100%;
+    height: 456px;
+    background-color: rgb(206, 121, 76);
+    padding-top: 200px;
+}
+.checkBoxs{
+    border-top: 2px solid grey;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+.checkBoxs button:first-child{
+    font-weight: bold;
+}
+
+.checkBox{
+    border: 0px;
+    width: 500px;
+    text-align: start;
+    font-size: 16px;
+    background-color: transparent;
+    margin-top: 2px;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
+.checkBox:hover{
+    background-color: rgb(241, 241, 241);
+}
+.checkBox:active{
+    background-color: rgb(225, 225, 225);
+}
+
+.checkBoxDark{
+    background-color: rgb(241, 241, 241);
+}
+.checkBoxDark:hover{
+    background-color: rgb(225, 225, 225);
+}
