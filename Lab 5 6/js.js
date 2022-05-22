@@ -127,7 +127,6 @@ function renderInput(i) {
         }
         else {
             const tr = document.createElement("tr")
-            console.log(objAzs.costs)
             const id = createInput(objAzs.id)
             const adress = createInput(objAzs.adress)
             const owner = createInput(objAzs.owner)
@@ -138,8 +137,6 @@ function renderInput(i) {
             okBtn.innerText = "OK"
             okBtn.classList.remove("hide")
             okBtn.addEventListener("click", () =>{
-                console.log(gasoline.firstChild.value)
-                console.log(cost.firstChild.value)
             renderOk(j,id.firstChild.value,
                 adress.firstChild.value,
                 owner.firstChild.value,
@@ -214,8 +211,6 @@ function renderOk(i,id,adress,owner,gasoline,cost){
             const volume = arrGasoline[g].split(",")[1]
             objAzs.addGasolines(type, volume, arrCost[g])
             }
-            console.log(arrCost)
-            console.log(objAzs.costs)
 
             const idOk = createTd(id)
             const adressOk = createTd(adress)
